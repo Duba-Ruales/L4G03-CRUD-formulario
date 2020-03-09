@@ -7,9 +7,11 @@ hola desde index <br>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ver Datos</title>
 </head>
-<body>
+<body bgcolor="#207CF9" >
 <center><br><br><br>
-<h2> Registros Actuales </h2>
+<font color="#ffffff">
+<h2> <u>Registros Actuales</u> </h2>
+</font>
 
 <?php
 //mostrar los datos de la bd y un boton de "nuevo" y me llebe a "crer.php"

@@ -7,21 +7,25 @@ hola desde crear<br>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
-<body><br><br><br><br>
+<body bgcolor="#207CF9"> <br><br><br><br>
 <center>
-<h2>Formulario de registro</h2>
+<font color="#ffffff">
+<h2> <u>Formulario de registro</u> </h2>
+</font>
 
  <form action="guardar_persona.php" method="post">
   
   <div class="form-group">
-    <label for="">Nombre: </label>  <br>
-    <input tipe="text" name="nombre"> <br><br>
+    <label for=""><b>Nombre: </b> </label>  <br>
+    <input tipe="text" name="nombre"  minlength="1" maxlength="40" required placeholder="Juan, Carlos, Maria"
+    title="Su propio nombre..."> <br><br>
   </div>
 
   <div class="form-group">
-    <label for="">Email:  </label>  <br>
-    <input tipe="text" name="email">
-  </div> <br>
+    <label for=""><b>Email: </b> </label>  <br>
+    <input tipe="text" name="email"  minlength="1" maxlength="40" required placeholder="Juan@gmail.com"
+    title="Use un correo Valido..."> <br><br>
+  </div> <br><br>
  
  <input type="submit" value="Guardar"/> 
  <input type="button" onclick="location.href='index.php';" value=" Ver Registros "/>
