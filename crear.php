@@ -1,5 +1,3 @@
-hola desde crear<br>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +5,7 @@ hola desde crear<br>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
 </head>
-<body bgcolor="#207CF9"> <br><br><br><br>
+<body bgcolor="#207cf9"> <br><br><br><br>
 <center>
 <font color="#ffffff">
 <h2> <u>Formulario de registro</u> </h2>
@@ -17,13 +15,13 @@ hola desde crear<br>
   
   <div class="form-group">
     <label for=""><b>Nombre: </b> </label>  <br>
-    <input tipe="text" name="nombre"  minlength="1" maxlength="40" required placeholder="Juan, Carlos, Maria"
+    <input type="text" name="nombre"  minlength="1" maxlength="40" required placeholder="Juan, Carlos, Maria"
     title="Su propio nombre..."> <br><br>
   </div>
 
   <div class="form-group">
     <label for=""><b>Email: </b> </label>  <br>
-    <input tipe="text" name="email"  minlength="1" maxlength="40" required placeholder="Juan@gmail.com"
+    <input type="text" name="email"   minlength="1" maxlength="40" required placeholder="Juan@gmail.com"
     title="Use un correo Valido..."> <br><br>
   </div> <br><br>
  

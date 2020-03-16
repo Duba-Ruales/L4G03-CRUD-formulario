@@ -1,49 +1,77 @@
-hola desde index <br>
+<?php
+include ('includes/db.php');
+
+$sql="SELECT * FROM personas";
+$result = DB::query($sql);
+/*
+//include ('includes/db.php');
+$pru = new DB();
+$pru -> init();
+*/
+
+//$con = new mysqli($host, $user, $password, $bd);
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ver Datos</title>
+    <title>Ver datos</title>
 </head>
-<body bgcolor="#207CF9" >
+<body bgcolor="#207cf9" >
+<!--
+<script>
+    var n = prompt("CONTRASEÑA: ");
+    if(n == 12345){
+        //alert("BIENVENIDO A TUS REGISTROS. ");
+    }else{
+        alert("Error de autenticacion");
+        window.location.href = "index.php"
+    }
+</script>
+-->
+
 <center><br><br><br>
 <font color="#ffffff">
 <h2> <u>Registros Actuales</u> </h2>
 </font>
 
-<?php
-//mostrar los datos de la bd y un boton de "nuevo" y me llebe a "crer.php"
-//subir a GIT con el nombre de L4G03-CRUD
-//include 'guardar_persona.php';
-
-   $conexion = mysqli_connect('localhost','root','','personas');
-?>
-
 <table border="1" >
         <tr>
             <th>  id  </th>
             <th>  nombre </th>
-            <th>  email </th>               
+            <th>  email </th> 
+            <th>  acciones  </th>       
         </tr>
+
 <?php
 
-$sql="SELECT * FROM personas";
-$result=mysqli_query($conexion,$sql);
+
+//$result=mysqli_query($con,$sql);
 
 while($mostrar=mysqli_fetch_array($result)){
 ?>
         <tr>
-            <td>  <?php echo $mostrar['id']?>  </td>
+            <td>  <?php echo $mostrar['id']?>   </td>
             <td>  <?php echo $mostrar['nombre']?>  </td>
             <td>  <?php echo $mostrar['email']?>  </td>
-        </tr>
-    <?php
-        }
-    ?>
+            <td>
+            <a href="editar.php?id=<?= $mostrar ['id']?>"> Editar </a>
+              <a href="" Eliminar > Eliminar </a>
+            </td>
+        <tr>
+    
+ <?php
+    }
+ ?>
 </table><br><br>
-<input type="button" onclick="location.href='crear.php';" value=" Agregar Usuario "/>
+<input type="button" onclick="location.href='crear.php'" value=" Agregar Usuario "/>
+<!-- <input type="button" name="button2" onclick="location.href='crear.php';" value=" Eliminar " /> -->
+
+
 </center>
 </body>
 </html>
