@@ -47,7 +47,8 @@ if(!$persona){//$persona == false){
   </div> <br><br><br>
  <div>
  <input type="submit" value="Guardar"/> 
- <a href ="index.php">mostrar datos registrados</a>
+ <!-- <a href ="index.php">mostrar datos registrados</a>-->
+ <input type="button" onclick="location.href='index.php';" value=" Ver Registros "/>
  </div>
  
 <!--
